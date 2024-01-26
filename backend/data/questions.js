@@ -2,6 +2,7 @@ const questions = [
   {
     title: 'Adding and Subtracting',
     numberOfSections: 3,
+    numOfTotalQuestions: 15,
     sections: [
       {
         instruction: 'Add numbers.',
@@ -86,6 +87,7 @@ const questions = [
   {
     title: 'Multiplication and Division',
     numberOfSections: 3,
+    numOfTotalQuestions: 15,
     sections: [
       {
         instruction: 'Multiply numbers.',

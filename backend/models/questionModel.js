@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-
 const questionSchema = new mongoose.Schema({
   question: { type: 'string', required: true },
   answer: { type: 'string', required: true },
@@ -21,9 +20,10 @@ const topicSchema = new mongoose.Schema({
   },
   title: { type: 'string', required: true },
   numberOfSections: { type: 'number', required: true },
+  numOfTotalQuestions: { type: 'number', required: true },
   sections: [sectionSchema],
 });
 
 const Topic = mongoose.model('Topic', topicSchema);
 
-export default Topic
+export default Topic;

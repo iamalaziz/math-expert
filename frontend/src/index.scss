@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sriracha&display=swap');
+
+@import './components/Footer/footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins";
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
