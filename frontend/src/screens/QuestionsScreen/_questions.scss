@@ -1,4 +1,5 @@
-.cards.container {
+.cards-container {
   width: 100%;
-  background-color: blue;
+  display: flex;
+  gap: 1rem;
 }

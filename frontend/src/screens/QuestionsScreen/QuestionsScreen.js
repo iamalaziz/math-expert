@@ -2,6 +2,8 @@ import React from 'react';
 import { useGetQuestionsQuery } from '../../slices/questionsApiSlice';
 import Card from '../../components/Card/Card';
 
+import "./_questions.scss"
+
 const QuestionsScreen = () => {
   const { data: questions, isLoading, error } = useGetQuestionsQuery();
 

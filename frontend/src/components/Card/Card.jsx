@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './_card.scss';
 
-const Card = ({ key, question }) => {
+const Card = ({ question }) => {
   return (
     <div className="card-wrapper">
       <Link to={`/questions/${question._id}`}>

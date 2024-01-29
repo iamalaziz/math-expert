@@ -2,7 +2,7 @@ import express from 'express';
 import {
   getAllQuestions,
   getQuestionById,
-} from '../controllers/questionControlller.js';
+} from '../controllers/questionController.js';
 
 const router = express.Router();
 
