@@ -9,6 +9,9 @@ dotenv.config()
 connectDB()
 
 const app = express();
+// Body parser middleware
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 const port = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {res.send("API is running!")})
