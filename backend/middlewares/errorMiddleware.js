@@ -13,6 +13,7 @@ const errorHandler = (err, req, res, next) => {
     statusCode = 404;
   }
 
+  console.log(err)
   res
     .status(statusCode)
     .json({
