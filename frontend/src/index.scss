@@ -6,15 +6,38 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // outline: 1px solid red;
+  // outline: 1px solid rgb(246, 111, 111);
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   width: 100%;
   height: 100vh;
   background-color: #fafafa;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button {
+  font-family: 'Poppins';
+}
+.paint {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    background: #2980FF;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    z-index: -1;
+  }
+}

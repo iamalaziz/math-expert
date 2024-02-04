@@ -17,7 +17,6 @@ const authSlice = createSlice({
   },
 });
 
-console.log(authSlice.actions)
 
 export const { setCredentials } = authSlice.actions;
 

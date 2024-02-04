@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import { GoArrowRight } from 'react-icons/go';
 import './_header.scss';
 
 const Header = () => {
   return (
     <header>
       <div className="container">
-        <h1>
-          <span className="paint">MATH</span> Trainer
+        <h1 className="logo">
+          <span className="paint">MATH</span> Expert
         </h1>
         <nav>
           <ul>
@@ -22,6 +24,12 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <Link to="/login" className="login-btn">
+          Login
+          <span>
+            <GoArrowRight />
+          </span>
+        </Link>
       </div>
     </header>
   );
