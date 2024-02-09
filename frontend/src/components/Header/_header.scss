@@ -53,5 +53,16 @@ header {
         background-color: rgba(229, 231, 235, 0.5);
       }
     }
+    .user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // color: #fff;
+      span {
+        padding-right: 5px;
+        // color: #2980FF;
+        font-size: 18px;
+      }
+    }
   }
 }

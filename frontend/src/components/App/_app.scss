@@ -6,7 +6,9 @@
     main {
       flex: auto;
       overflow: hidden;
-      padding-top: 90px; 
+      padding-top: 90px;
+      display: flex;
+      justify-content: center;
       // needs to be changed after header is done
     }
   }
