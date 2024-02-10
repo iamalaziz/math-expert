@@ -6,6 +6,7 @@ import { IoMoonOutline } from 'react-icons/io5';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { AiOutlineLogout } from 'react-icons/ai';
+import { GoChevronDown } from 'react-icons/go';
 
 import './_dropdown.scss';
 
@@ -14,15 +15,21 @@ export const Dropdown = () => {
   const { userInfo } = useSelector((state) => state.auth);
 
   const handleClick = () => {
-    if(userInfo) {
-      setIsOpen(!isOpen)
-    } 
-  }
+    if (userInfo) {
+      setIsOpen(!isOpen);
+    }
+  };
+  const handleBlur = () => {
+    setIsOpen(false);
+  };
   return (
-    <div className={`dropdown ${isOpen ? 'open' : ''}`}>
-      <button className="user" onClick={handleClick}>
+    <div className={`dropdown ${isOpen ? 'open' : ''}`} onBlur={handleBlur}>
+      <button className="btn-user" onClick={handleClick}>
         {userInfo ? (
-          userInfo.name
+          <>
+            {userInfo.name}
+            <GoChevronDown />
+          </>
         ) : (
           <Link to="/login" className="login-btn">
             Login
@@ -31,28 +38,20 @@ export const Dropdown = () => {
       </button>
       <div className={`menu ${isOpen ? 'open' : ''}`}>
         <button>
-          <span>
-            <FaRegUserCircle />
-          </span>
-          <span>Profile</span>
+          <FaRegUserCircle />
+          Profile
         </button>
         <button>
-          <span>
-            <IoMoonOutline />
-          </span>
-          <span>Dark Mode</span>
+          <IoMoonOutline />
+          Dark Mode
         </button>
         <button>
-          <span>
-            <IoSettingsOutline />
-          </span>
-          <span>Settings</span>
+          <IoSettingsOutline />
+          Settings
         </button>
         <button className="btn-logout">
-          <span>
-            <AiOutlineLogout />
-          </span>
-          <span>Logout</span>
+          <AiOutlineLogout />
+          Logout
         </button>
       </div>
     </div>

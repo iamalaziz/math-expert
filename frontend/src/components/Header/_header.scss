@@ -44,25 +44,9 @@ header {
     }
     .login-btn {
       text-decoration: none;
-      color: black;
-      padding: 8px 15px;
-      border: 1px solid rgb(226, 232, 240);
-      border-radius: 8px;
-      margin: 0 5px;
-      &:hover {
-        background-color: rgba(229, 231, 235, 0.5);
-      }
-    }
-    .user {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      // color: #fff;
-      span {
-        padding-right: 5px;
-        // color: #2980FF;
-        font-size: 18px;
-      }
+      width: 50px;
+      text-align: center;
+      color: #2980FF;
     }
   }
 }

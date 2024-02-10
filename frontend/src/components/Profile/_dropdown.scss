@@ -1,20 +1,26 @@
 .dropdown {
   position: relative;
-  // border: 1px solid red;
   & > button {
     position: relative;
     z-index: 2;
     background: #fff;
     transition: 0.3s;
   }
+  .btn-user {
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: rgb(243, 244, 246);
+  }
   button {
-    // border: 1px solid red;
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 0 16px;
     width: 180px;
-    background: transparent;
+    background-color: #fff;
     border-radius: 8px;
     border: 0;
     cursor: pointer;
@@ -37,8 +43,6 @@
     box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px,
       rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
       rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
-    background: #fff;
-    // transition: 0.4s;
     border: 1px solid rgb(229, 231, 235);
     button {
       border: 0;
