@@ -1,53 +1,35 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import { IoMoonOutline } from 'react-icons/io5';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { AiOutlineLogout } from 'react-icons/ai';
 
-import './styles.css';
-
-// const Icon = ({ children, iconRef, className }) => (
-//   <span
-//     ref={iconRef}
-//     className={`${className || ""} material-symbols-outlined`}
-//   >
-//     {children}
-//   </span>
-// );
+import './_dropdown.scss';
 
 export const Dropdown = () => {
-  const buttonRef = useRef(null);
-  const chevronRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [menuTop, setMenuTop] = useState();
-  const [menuRight, setMenuRight] = useState();
+  const { userInfo } = useSelector((state) => state.auth);
 
   const handleClick = () => {
-    const buttonRect = buttonRef?.current?.getBoundingClientRect();
-    const chevronRect = chevronRef?.current?.getBoundingClientRect();
-
-    if (buttonRect && chevronRect && isOpen) {
-      const menuRight = buttonRect.right - chevronRect.right;
-      const menuTop = chevronRect.top - buttonRect.top;
-      setMenuRight(`${menuRight}px`);
-      setMenuTop(`${menuTop}px`);
-    } else {
-      setMenuRight('0');
-      setMenuTop('78px');
-    }
-
-    setIsOpen(!isOpen);
-  };
-
+    if(userInfo) {
+      setIsOpen(!isOpen)
+    } 
+  }
   return (
     <div className={`dropdown ${isOpen ? 'open' : ''}`}>
-      <button ref={buttonRef} onClick={handleClick}>
-        <span>Preferences</span>
+      <button className="user" onClick={handleClick}>
+        {userInfo ? (
+          userInfo.name
+        ) : (
+          <Link to="/login" className="login-btn">
+            Login
+          </Link>
+        )}
       </button>
-      <div
-        className={`menu ${isOpen ? 'open' : ''}`}
-        style={{ right: menuRight, top: menuTop }}
-      >
+      <div className={`menu ${isOpen ? 'open' : ''}`}>
         <button>
           <span>
             <FaRegUserCircle />
@@ -66,7 +48,7 @@ export const Dropdown = () => {
           </span>
           <span>Settings</span>
         </button>
-        <button>
+        <button className="btn-logout">
           <span>
             <AiOutlineLogout />
           </span>

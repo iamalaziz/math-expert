@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { GoArrowRight } from 'react-icons/go';
 import './_header.scss';
+import { Dropdown } from '../Profile/Dropdown';
 
 const Header = () => {
-  const { userInfo } = useSelector((state) => state.auth);
 
   return (
     <header>
@@ -26,16 +24,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        {userInfo ? (
-          <p className="user">{userInfo.name.split(' ')[0]}</p>
-        ) : (
-          <Link to="/login" className="login-btn">
-            Login
-            <span>
-              <GoArrowRight />
-            </span>
-          </Link>
-        )}
+        <Dropdown />
       </div>
     </header>
   );
