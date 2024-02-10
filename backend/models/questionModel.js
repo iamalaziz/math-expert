@@ -22,6 +22,7 @@ const topicSchema = new mongoose.Schema({
   numberOfSections: { type: 'number', required: true },
   numOfTotalQuestions: { type: 'number', required: true },
   sections: [sectionSchema],
+  image: { type: 'string', required: true },
 });
 
 const Topic = mongoose.model('Topic', topicSchema);

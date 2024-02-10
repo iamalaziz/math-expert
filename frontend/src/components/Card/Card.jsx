@@ -7,10 +7,21 @@ const Card = ({ question }) => {
   return (
     <div className="card-wrapper">
       <Link to={`/questions/${question._id}`}>
-        <h2>{question.title}</h2>
+        <div className="card-top">
+          <div className="img-overlay">
+            <img src={question.image} alt="topic image" />
+          </div>
+          <h2>{question.title}</h2>
+        </div>
       </Link>
-      <p>{question.numberOfSections}</p>
-      <p>{question.numOfTotalQuestions}</p>
+      <div className="card-footer">
+        <h2>{question.title}</h2>
+        <p>Number of Tasks: {question.numberOfSections}</p>
+        <p>Number of Total Questions: {question.numOfTotalQuestions}</p>
+        <Link to={`/questions/${question._id}`}>
+          <button className="btn-start">PRACTICE</button>
+        </Link>
+      </div>
     </div>
   );
 };

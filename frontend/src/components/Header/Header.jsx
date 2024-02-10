@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './_header.scss';
 import { Dropdown } from '../Profile/Dropdown';
 
@@ -14,13 +14,13 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">About</Link>
+              <NavLink to="/">About</NavLink>
             </li>
             <li>
-              <Link to="/questions">Questions</Link>
+              <NavLink to="/questions">Questions</NavLink>
             </li>
             <li>
-              <Link to="/dashboard">Dashboard</Link>
+              <NavLink to="/dashboard">Dashboard</NavLink>
             </li>
           </ul>
         </nav>

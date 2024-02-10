@@ -4,6 +4,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 15;
+  background-color: #fff;
+  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   .container {
     max-width: 80rem;
     display: flex;
@@ -33,11 +36,14 @@ header {
           text-decoration: none;
           color: black;
           padding: 5px 10px;
-          border: 1px solid rgb(226, 232, 240);
+          // border: 1px solid rgb(226, 232, 240);
           border-radius: 8px;
           margin: 0 5px;
           &:hover {
             background-color: rgba(229, 231, 235, 0.5);
+          }
+          &.active {
+            color: #2980FF;
           }
         }
       }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { useGetQuestionsQuery } from '../../slices/questionsApiSlice';
 import Card from '../../components/Card/Card';
 
@@ -8,22 +8,22 @@ const QuestionsScreen = () => {
   const { data: questions, isLoading, error } = useGetQuestionsQuery();
 
   return (
-    <div>
+    <section className="questions">
       {isLoading ? (
         <h2>Loading...</h2>
       ) : error ? (
-        <div>{error?.data?.message || error.error}</div>
+        <div>{error.data.message || error.error}</div>
       ) : (
-        <>
+        <Fragment>
           <h1>Questions</h1>
           <div className="cards-container">
-            {questions?.map((question) => (
+            {questions.map((question) => (
               <Card key={question._id} question={question} />
             ))}
           </div>
-        </>
+        </Fragment>
       )}
-    </div>
+    </section>
   );
 };
 

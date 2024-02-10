@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './components/App/App';
-import HomeScreen from './screens/HomeScreen';
+import HomeScreen from './screens/HomeScreen/HomeScreen';
 import QuestionsScreen from './screens/QuestionsScreen/QuestionsScreen';
 import TestScreen from './screens/TestScreen/TestScreen';
 import DashboardScreen from './screens/DashboardScreen';
