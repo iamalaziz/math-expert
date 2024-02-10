@@ -17,6 +17,7 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
+import SignupScreen from './screens/SignupScreen/SignupScreen';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="/questions/:id" element={<TestScreen />}></Route>
       <Route path="/dashboard" element={<DashboardScreen />}></Route>
       <Route path="/login" element={<LoginScreen />}></Route>
+      <Route path="/register" element={<SignupScreen />}></Route>
     </Route>
   )
 );

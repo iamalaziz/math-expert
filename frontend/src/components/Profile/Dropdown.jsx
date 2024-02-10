@@ -11,7 +11,6 @@ import { AiOutlineLogout } from 'react-icons/ai';
 import { GoChevronDown } from 'react-icons/go';
 
 import './_dropdown.scss';
-import { set } from 'mongoose';
 
 export const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
